@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="images-assasin/logo.jpg" type="image/icon type">
+    <title>Assassin's Creed</title>
+</head>
+<body style="font-family: din-2014,sans-serif;">
+    <style>
+        #logo:hover{
+            background-color: rgb(172, 172, 172);
+        }
+    </style>
+    <div style="background-color: black; height: 50px; width: 100%;">
+        <div style = "width: 150px; height: 50px; text-align: center;" id = "logo"> 
+        <img  src="./images-assasin/ubisoftLogo.png" style = "height: 50px; width: 100px;">
+        </div>
+        <div style="background-color: aliceblue;">
+            <img src="./images-assasin/menu.png " id="menuBar" onclick="menu1()">
+        </div>
+    </div> 
+    <div style="width: 740px; height: 820px; border: solid 2px; position: absolute; background-color: white; left: -743px;" id='Closemenu' >
+        <div style=" border: solid 2px;">
+            <img src="./images-assasin/cancel.png" onclick="closeMenu1()">
+        </div>
+        <div style=" border: solid 2px; ">
+        <a style="text-decoration: none; color: black;" href="https://assassinscreed.ubisoft.com/game/en-us/home" target="_blank">
+            <h3>HOME</h3>
+        </a>
+        </div>
+        <div style=" border: solid 2px;" onmouseover="scroll1()">
+            <a style="text-decoration: none; color: black;" href="https://assassinscreed.ubisoft.com/game/en-us/odyssey" target="_blank">
+                <h3>GAME INFO</h3>
+            </a>
+        </div>
+        <div style=" border: solid 2px;">
+                <a style="text-decoration: none; color: black;" href="https://assassinscreed.ubisoft.com/game/en-us/odyssey" target="_blank">
+                    <h3>123123123</h3>
+                </a>
+            </div>
+        <div id="cover" style="position: absolute; top:170px; width: 740px;">
+            <div style=" border: solid 2px;">
+                <a  style="text-decoration: none; color: black;" href="https://assassinscreed.ubisoft.com/game/en-us/news-updates" target="_blank">
+                    <h3>NEWS & VIDEO</h3>
+                </a>
+            </div>
+            <div style=" border: solid 2px;">
+                <a style="text-decoration: none; color: black;" href="">
+                    <h3>COMMUNITY</h3>
+                </a>
+            </div>
+            <div style=" border: solid 2px;">
+                <h3>SUPPORT</h3>
+            </div>
+            <div style=" border: solid 2px;">
+                <h3>ALL GAMES</h3>
+            </div>
+            <div style=" border: solid 2px;">
+                <h3>POST LAUNCHH</h3>
+            </div>        
+            <div style=" border: solid 2px;">
+                <h3>PHOTO MODE</h3>
+            </div>
+            <div style=" border: solid 2px;">
+                <h3>STORY CREATOR MODE</h3>
+            </div>
+        </div>
+    </div>
+    <div style="width: 806px; height: 370px;">
+        <div>
+        
+        </div>
+        <div>
+        
+        </div>
+    </div>
+    <div>
+   
+        <h1 style="text-align: center;">Assassin's Creed</h1>
+        <h2 style="text-align: center;"><u>Preview</u></h2>
+        <p style="font-size: large;"><i>Assassin's Creed is a series of game that was developed by Ubisoft. It was originated from a story with the same name.</i></p>
+        <img style="width: 300px; " src="./Imgs/assassinCreed2.jpg">
+        <p><b>Assassin's Creed</b> is an action-adventure, stealth video game franchise, created by Patrice Désilets, Jade Raymond and Corey May. Developed and published by Ubisoft. <br>
+        The game is about a war between the order of the Assasins and the Templars. They both fight for peace, the Assassins fight for peace in freedom but the Templars want peace but under their control. IN this game, take place in characters in Assassin team and the last target is to safe the world from the bane of "The First Civillization" but we have to unlock the memories to know what to do so the Templars are also killed - in our player's memories. </p>
+        <h2 style="text-align: center;"><u>Premise</u></h2>
+        <p>The Assassin's Creed games primarily revolve around the rivalry between two ancient secret societies — the Assassins and the Templar — and their indirect relation to an ancient species pre-dating humanity, referred to within the games as The First Civillization, whose society, along with much of Earth's biosphere, was destroyed by a massive solar storm thousands of years before the games. The games' real-world chronological setting begins in the year 2012, but the gameplay was mostly played in historical settings.</p>
+        <img style="width:500px;" src="./Imgs/assassinCreedUnityScene.jpg">
+
+        <p>
+        Within the franchise, Abstergo Industries is a mega-corporation conglomerate with multiple branches, secretly run by modern Templar. The company is the present-day main antagonist of the franchise. Abstergo secretly created the "Animus", a device that allows its users to "re-live" and experience the memories of their genetic ancestors within their bloodline through a virtual simulation. Overexposure to the animus causes the "bleeding effect", which results in giving the user skills and abilities their his ancestors, but is also dangerous for the user as it can damage their mind, causing symptoms such as dementia, insanity, dissociative identity disorder or even brain damage. Abstergo is seeking to discover the location of several historical artifacts, known as the "Pieces of Eden". Such artifacts hold great power, and are capable of controlling free will. Abstergo seeks to use them to remove free will and bring humanity into one single unified group, while the Assassins oppose them. In order to find the Pieces of Eden, Abstergo is abducting people whose ancestors are suspected to have had historically confirmed or suspected interactions with such devices, forcing the kidnapped person into the Animus and searching for clues on their ancestors' memories within the Animus.</p>
+        <img style="width:300px;" src="./Imgs/piecesOfEden.PNG">   
+    </div>
+
+    <script>
+        function menu1(){
+            var a = document.getElementById('Closemenu')
+            a.style.left="0px"
+            a.style.transition='left 1s'
+        };
+        
+        function closeMenu1(){
+            var b = document.getElementById('Closemenu')
+            b.style.left="-743px"
+            b.style.transition='left 1s'
+        };
+        function scroll1(){
+            var a = document.getElementById('cover');
+            a.style.top = "236px";
+        }
+    </script>
+</body>
+</html>
