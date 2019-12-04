@@ -122,19 +122,29 @@ $(window).scroll(function(){
     }else{
         $("#inner-trailer video").get(0).pause();
     }
-    if($(this).scrollTop() > 100){
+    if($(this).scrollTop() > 350){
         $(".topnav").css({"position":"fixed","top":"0px","opacity":".8"});
         $("#arr").css({"position":"fixed","top":"10px","opacity":".8"});
         $("#languages").css({"position":"fixed","top":"10px","opacity":".8"});
-        $(".searchBox").css({"position":"fixed","top":"-30px","left": "350px","opacity":".8"});
+        $(".searchBox").css({"position":"fixed","top":"-30px","left": "355px","opacity":".8"});
         $(".searchInput").css({"width": "300px","padding": "0 6px"});
-        $("#suggest-container").css({"position":"fixed","top":"60px","left": "130px","opacity":".8"});
+        $(".searchButton").css({"background-color":"#2f3640","color":"white"});
+        $("#suggest-container").css({"position":"fixed","top":"60px","left": "170px","opacity":".8"});
+        $("#header img").css({"position":"fixed","top":"-50px","left":"-70px","width":"175px","height":"55px","z-index":"1"});
     }else{
         $(".topnav").css({"position":"absolute","top":"70px","right":"70px","opacity":"1"});
         $("#arr").css({"position":"absolute","top":"80px","right":"20px","opacity":"1"});
         $("#languages").css({"position":"absolute","top":"80px","right":"20px","opacity":"1"});
         $(".searchBox").css({"position":"absolute","top":"60%","left":"51%","opacity":"1"});
+        $(".searchButton").css({"background-color":"#2f3640","color":"white"});
         $("#suggest-container").css({"position":"absolute","top":"450px","left": "510px","opacity":"1"});
+        $("#header img").css({"position":"unset","width":"235px","height":"90px","margin":"50px 70px"});
+        $(".searchInput").css({"width": "0px","padding": "0px"});
+        $("#suggestion1").css("display","none");
+        $("#suggestion2").css("display","none");
+        $("#suggestion3").css("display","none");
+        $("#suggestion4").css("display","none");
+        $("#suggestion5").css("display","none");
     }
 });
 $('.scrollToTop').click(function(){
