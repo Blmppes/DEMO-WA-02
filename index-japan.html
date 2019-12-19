@@ -8,33 +8,38 @@
     </head>
     <body>
         <div id="intro1">
-                <h1 style="color:white;font-size: 60px;position: absolute;top: 200px; left: 350px">Welcome to our website</h1>
+                <h1 style="color:white;font-size: 60px;position: absolute;top: 200px; left: 220px">私たちのウェブサイトへようこそ</h1>
             </div>
         <div id="intro2">
             <h1 style="color:white;font-size: 50px;position: absolute;top: 0px; left: 500px;text-decoration: underline wavy;cursor: pointer;">Thundersearch</h1>
-            <a id="continue" onclick="unintro()">Continue</a>
+            <a id="continue" onclick="unintro()">持続する</a>
         </div>
         <div id="languages">
             <img src="images-main/japan-flag-3d-icon-64.png" onclick="window.open('index-japan.html')" style="width:32px;height:32px;">
             <img src="images-main/united-states-of-america-flag-3d-icon-64.png" onclick="window.open('index.html')" style="width:32px;height:32px;margin-top: 2px">
             <img id="vie" src="images-main/vietnam-flag-3d-icon-64.png" onclick="window.open('index-vie.html')" style="width:32px;height:32px;margin-top: 2px">
-            <img src="images-main/china-flag-3d-icon-64.png" onclick="window.open('index-chinese.html')" style="width:32px;height:32px;margin-top: 2px">
-            <img src="images-main/spain-flag-3d-icon-64.png" onclick="window.open('index-spain.html')" style="width:32px;height:32px;margin-top: 2px">
+            <img src="images-main/china-flag-3d-icon-64.png" onclick="window.open('index-chinese.html')" style="width:32px;height:32px;margin-top: 2px"> 
             <img src="images-main/france-flag-3d-icon-64.png" onclick="window.open('index-france.html')" style="width:32px;height:32px;margin-top: 2px">
-            <img src="images-main/germany-flag-3d-icon-64.png" onclick="window.open('index-germany.html')" style="width:32px;height:32px;margin-top: 2px">
         </div>
         <i class="fas fa-sort-down" id="arr" style="display: none;font-size: 20px;margin: 5px 2px;cursor: pointer;position: absolute;right: 20px;top: 80px;z-index: 1;" onclick="show_languages()"></i>
         <div id="container" style="display: none;">
+            <div class="slide-show" style="display:none">
+                <img src="images-main/assasin creed.jpg" id="slide-img1">
+                <img src="images-main/gta 5.jpg" id="slide-img2">
+                <img src="images-main/far cry5.jpg" id="slide-img3">
+                <img src="images-main/watch dogs 2.jpg" id="slide-img4">
+                <img src="images-main/call of duty.jpg" id="slide-img5">
+            </div>
             <div id="header">
                 <img src="images-main/logo.png" style="cursor: pointer;width: 235px;height: 90px;margin: 50px 70px;background-color: white;border-radius: 10px;">
                 <div class="topnav">
-                    <a class="active" onclick="scrolltopart('home')">Home</a>
-                    <a id="most-popular" onclick="scrolltopart('most-popular')">Popular games</a>
-                    <a onclick="scrolltopart('trailer')">Trailer</a>
-                    <a onclick="scrolltopart('contact')">Contact</a>
-                    <a href="about.html">About</a>
+                    <a class="active" onclick="scrolltopart('home')">ホーム</a>
+                    <a id="most-popular" onclick="scrolltopart('most-popular')">人気のゲーム</a>
+                    <a onclick="scrolltopart('trailer')">トレーラー</a>
+                    <a onclick="scrolltopart('contact')">接触</a>
+                    <a href="about-japan.html">約</a>
                 </div>
-                <h1 style="color: red;padding:8px;border:none;border-radius: 10px;height: 60px;font-size: 50px;margin: 300px 0px 0px 70px;">Find your best game</h1>
+                <h1 style="color: red;padding:8px;border:none;border-radius: 10px;height: 60px;font-size: 50px;margin: 300px 0px 0px 30px;">最高のゲームを見つける</h1>
                 <div class="searchBox" onmouseover="changeSearchBar()">
                     <input class="searchInput" type="text" name="" placeholder="Search" onkeyup="suggest()">
                     <button class="searchButton" href="#" onclick="search()">
@@ -51,7 +56,7 @@
             </div>
             <a href="#" class="scrollToTop">^</a>
             <div id="article">
-                <h1 id="most-popular-games-header" style="transition: 0.5s;font-size: 45px;text-align: center;background-color: red;width: 1345px;padding: 5px 0px;">Popular games</h1>
+                <h1 id="most-popular-games-header" style="transition: 0.5s;font-size: 45px;text-align: center;background-color: red;width: 1345px;padding: 5px 0px;">人気のゲーム</h1>
                 <section id="most-popular-games" style="display: flex;">
                     <div id="gta5" class="games" style = "border: 3px solid orange;background-color: orange;">
                         <h1 style="text-align: center;font-size: 30px;margin: 15px 0px">GTA 5</h2>
@@ -66,7 +71,7 @@
                         <img src="images-main/bt-assasin's creed.jpg" style="width: 300px;height: 303px;border-bottom-left-radius: 17px;border-bottom-right-radius: 17px">
                     </div>
                 </section>
-                <h1 style="font-size:47px;color: white;border: 2px solid rgb(46, 154, 255);background-color: rgb(46, 154, 255);text-align: center;width: 1345px">Trailer</h1>
+                <h1 style="font-size:47px;color: white;border: 2px solid rgb(46, 154, 255);background-color: rgb(46, 154, 255);text-align: center;width: 1345px">トレーラー</h1>
                 <section id="trailer">
                     <h2 style="margin: 0px 72px;font-size:30px;">GTA 5</h2>
                     <div id="inner-trailer">
@@ -85,22 +90,22 @@
                         </div>
                     </div>
                 </section>
-                <h1 style="text-align: center;font-size: 45px;width: 1345px;margin: 0px;;">Contact</h1>
+                <h1 style="text-align: center;font-size: 45px;width: 1345px;margin: 0px;;">接触</h1>
                 <form id="contact">
-                    <h2 style="position: absolute;top: 30px;">Name:</h2>
+                    <h2 style="position: absolute;top: 30px;">名:</h2>
                     <input name="name" type="text" style="position: absolute;top: 90px;width: 270px;height: 30px;border-radius: 5px;font-size: 14px;color: #777;background-color: #fff;border: 1px solid #ccc;">
-                    <h2 style="position: absolute;top: 30px;left: 275px">Email address:</h2>
+                    <h2 style="position: absolute;top: 30px;left: 275px">電子メールアドレス:</h2>
                     <input name="email" type="text" style="position: absolute;top: 90px;left: 275px;width: 270px;height: 30px;border-radius: 5px;font-size: 14px;color: #777;background-color: #fff;border: 1px solid #ccc;">
-                    <h2 style="position: absolute;top: 110px">Topic name:</h2>
+                    <h2 style="position: absolute;top: 110px">トピック名:</h2>
                     <input id="subject" name="topic" type="text" style="position: absolute;top: 170;width: 540px;height: 30px;border-radius: 5px;font-size: 14px;color: #777;background-color: #fff;border: 1px solid #ccc;">
-                    <h2 style="position: absolute;top: 185px">Content</h2>
+                    <h2 style="position: absolute;top: 185px">コンテンツ</h2>
                     <textarea id="text-content" cols="65" rows="13"></textarea>
-                    <button id="sendButton" style="position: absolute;top: 480px;width: 100px;height: 40px;color:white;font-size: 30px;background-color: rgb(46, 154, 255);border-radius: 5px;border:none;" onclick="send()">Send</button>
+                    <button id="sendButton" style="position: absolute;top: 480px;width: 100px;height: 40px;color:white;font-size: 30px;background-color: rgb(46, 154, 255);border-radius: 5px;border:none;" onclick="send()">送る</button>
                 </form>
             </div>
             <div id="footer">
                 <div id="all-game">
-                    <h2 style="color: white;margin: 20px 100px;">Popular games</h2>
+                    <h2 style="color: white;margin: 20px 100px;">人気のゲーム</h2>
                     <ul>
                         <li>Assasin's Creed Odyssey</li>
                         <li>Far Cry 5</li>
@@ -110,13 +115,13 @@
                     </ul>
                 </div>
                 <div id="contact2">
-                    <h2 style="color: white;margin: 20px 100px;">Contact us</h2>
+                    <h2 style="color: white;margin: 20px 100px;">お問い合わせ</h2>
                     <ul>
                         <li><a href="https://www.facebook.com/khoa.nguyenviet.1000469" target="_blank" style="text-decoration: none;color:white">Facebook</a></li>
                         <li><a onclick="alert('dotrunghieustaw@gmail.com')" style="text-decoration: none;">Gmail</a></li>
                     </ul>
                 </div>
-                <h2 style="color:white;margin: 40px 0px 0px 100px;">Hotline: 09273182749</h2>
+                <h2 style="color:white;margin: 40px 0px 0px 100px;">ホットライン: 09273182749</h2>
             </div>
         </div>
     </body>

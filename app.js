@@ -8,10 +8,11 @@ var intro2 = document.getElementById("intro2");
 var container = document.getElementById("container");
 var body = document.getElementsByTagName("body")[0];
 var sendButton = document.getElementById("sendButton");
-var games = ["assasin's creed","far cry 5","gta 5","watch dogs 2","aaaaa","fffff","gggg","wwwww","playerunknown's battlegrounds","call of duty: modern warfare"]
+var games = ["Assasin's Creed Games","Far Cry 5","GTA 5","Watch Dogs 2","Playerunknown's Battlegrounds","Call of Duty: Modern Warfare","Minecraft"]
 var data_js = {
     "access_token": "u1n1ox2uwypehgmgof9cw17h"
 };
+var countimg = 1;
 count_lang = 0;
 
 window.onload = () =>{
@@ -30,36 +31,9 @@ function unintro(){
         body.style.overflow = "auto";
         $("#languages").css("display","block");
         $("#arr").css("display","block");
+        $(".slide-show").css("display","block");
     },900);    
 }
-setInterval(() => {
-    count += 1;
-    if(count >= 5){
-        count = 0;
-    }
-    if(count == 0){
-        obj.style.background = "url('images-main/assasin creed.jpg')";
-        obj.style.backgroundRepeat = "no-repeat";
-        obj.style.backgroundSize = "cover";
-    }else if(count == 1){
-        obj.style.background = "url('images-main/gta 5.jpg')";
-        obj.style.backgroundRepeat = "no-repeat";
-        obj.style.backgroundSize = "cover";
-    }else if(count == 2){
-        obj.style.background = "url('images-main/far cry5.jpg')";
-        obj.style.backgroundRepeat = "no-repeat";
-        obj.style.backgroundSize = "cover";
-    }else if(count == 3){
-        obj.style.background = "url('images-main/watch dogs 2.jpg')";
-        obj.style.backgroundRepeat = "no-repeat";
-        obj.style.backgroundSize = "cover";
-    }
-    else if(count == 4){
-        obj.style.background = "url('images-main/call of duty.jpg')";
-        obj.style.backgroundRepeat = "no-repeat";
-        obj.style.backgroundSize = "cover";
-    }
-},5000);
 
 function suggest(){
     for(var i = 0; i < 5; i++){
@@ -69,7 +43,7 @@ function suggest(){
     var count = 0;
     for(var i = 0; i < games.length; i++){
         if(searchInput.value.toLowerCase() != ""){
-            if(games[i].substr(0, searchInput.value.length) == searchInput.value.toLowerCase()){
+            if(games[i].toLowerCase().substr(0, searchInput.value.length) == searchInput.value.toLowerCase()){
                 count += 1;
                 document.getElementById("suggestion"+String(count)).style.display = "block";
                 document.getElementById("suggestion"+String(count)).innerHTML = games[i];
@@ -124,13 +98,17 @@ $(window).scroll(function(){
     }
     if($(this).scrollTop() > 350){
         $(".topnav").css({"position":"fixed","top":"0px","opacity":".8"});
-        $("#arr").css({"position":"fixed","top":"10px","opacity":".8"});
         $("#languages").css({"position":"fixed","top":"10px","opacity":".8"});
         $(".searchBox").css({"position":"fixed","top":"-30px","left": "355px","opacity":".8"});
         $(".searchInput").css({"width": "300px","padding": "0 6px"});
         $(".searchButton").css({"background-color":"#2f3640","color":"white"});
         $("#suggest-container").css({"position":"fixed","top":"60px","left": "170px","opacity":".8"});
         $("#header img").css({"position":"fixed","top":"-50px","left":"-70px","width":"175px","height":"55px","z-index":"1"});
+        if($("#arr").attr("class") == "fas fa-sort-up"){
+            $("#arr").css({"position":"fixed","top":"17px","opacity":".8"});
+        }else if($("#arr").attr("class") == "fas fa-sort-down"){
+            $("#arr").css({"position":"fixed","top":"10px","opacity":".8"});
+        }
     }else{
         $(".topnav").css({"position":"absolute","top":"70px","right":"70px","opacity":"1"});
         $("#arr").css({"position":"absolute","top":"80px","right":"20px","opacity":"1"});
@@ -145,6 +123,11 @@ $(window).scroll(function(){
         $("#suggestion3").css("display","none");
         $("#suggestion4").css("display","none");
         $("#suggestion5").css("display","none");
+        if($("#arr").attr("class") == "fas fa-sort-up"){
+            $("#arr").css({"position":"absolute","top":"87px","right":"20px","opacity":"1"});
+        }else if($("#arr").attr("class") == "fas fa-sort-down"){
+            $("#arr").css({"position":"absolute","top":"80px","right":"20px","opacity":"1"});
+        }
     }
 });
 $('.scrollToTop').click(function(){
@@ -228,17 +211,17 @@ function scrolltopart(name){
 }
 function show_languages(){
     if(count_lang % 2 == 0){
-        if($(window).scrollTop() > 100){
-            $("#languages").css("height","236px");
+        if($(window).scrollTop() > 350){
+            $("#languages").css("height","168px");
             $("#arr").attr("class","fas fa-sort-up");
             $("#arr").css("top","17px");
         }else{
-            $("#languages").css("height","236px");
+            $("#languages").css("height","168px");
             $("#arr").attr("class","fas fa-sort-up");
             $("#arr").css("top","87px");
         }
     }else{
-        if($(window).scrollTop() > 100){
+        if($(window).scrollTop() > 350){
             $("#languages").css("height","32px");
             $("#arr").attr("class","fas fa-sort-down");
             $("#arr").css("top","10px");
@@ -250,3 +233,23 @@ function show_languages(){
     }
     count_lang+=1;
 }
+function test(){
+    var nextcount = 0;
+    if(countimg == 5){
+        nextcount = 1;
+    }else{
+        nextcount = countimg + 1
+    }
+    var a = document.getElementById('slide-img'+countimg)
+    var b = document.getElementById('slide-img'+nextcount)
+    a.style.opacity = 0;
+    b.style.opacity = 1;
+    a.style.transition = "opacity 1.5s";
+    b.style.transition = "opacity 1.5s";
+    if(countimg == 5){
+        countimg = 1;
+    }else{
+        countimg += 1;
+    }
+}
+setInterval(test,5000);
